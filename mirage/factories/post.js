@@ -6,6 +6,6 @@ export default Factory.extend({
     return `Post ${i+1}`;
   },
   body() {
-    return faker.random.words();
+    return faker.lorem.paragraph();
   } 
 });
