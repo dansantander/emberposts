@@ -1,0 +1,20 @@
+<form onsubmit={{action "createPost"}}>
+  <div>
+    <label for="title">
+      Title
+      {{!-- <input type="text" id="title">  --}}
+      {{input type="text" id="title" value=title}}
+      {{!-- ember syntax for getting the value of the input --}}
+      {{!--value=title values the input with the title attribute --}}
+      {{!-- these variables title and body are the same that we have in the controller --}}
+    </label>
+  </div>
+  <div>
+    <label for="body">
+      Body
+      {{!-- <textarea id="body" cols="30" rows="10"></textarea> --}}
+      {{textarea id="body" cols="30" rows="10" value=body}}
+    </label>
+  </div>
+  <button type="submit">Publish</button>
+</form>
