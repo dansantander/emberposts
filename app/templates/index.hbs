@@ -4,6 +4,11 @@
       {{#link-to "post" post.id}}
         {{post.title}}
       {{/link-to}}
+
+      {{#link-to "edit" post.id}}
+        Edit
+      {{/link-to}}
+      
       {{!-- button working just fine with old 'onclick=' syntax --}}
       <button type="button" onclick= {{action "deletePost" post}} >Delete</button>
     </li>
