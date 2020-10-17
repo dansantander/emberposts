@@ -1,9 +1,11 @@
 <ul>
-  {{#each model as |post|}}
+  {{#each model as |post|}} {{!-- //model is a list of posts --}}
     <li>
       {{#link-to "post" post.id}}
         {{post.title}}
       {{/link-to}}
+      {{!-- button working just fine with old 'onclick=' syntax --}}
+      <button type="button" onclick= {{action "deletePost" post}} >Delete</button>
     </li>
   {{/each}}
 
