@@ -1,18 +1,33 @@
-<ul>
-  {{#each model as |post|}} {{!-- //model is a list of posts --}}
-    <li>
-      {{#link-to "post" post.id}}
-        {{post.title}}
-      {{/link-to}}
+<div class="container">
+  <ul class="card-container py-5">
+    {{#each model as |post|}} {{!-- //model is a list of posts --}}
+      <li class="mx-2 my-2">
+        <div class="card">
+          <img class="card-img-top" src={{post.image}} alt="Card image cap">
+          <div class="my-4">
+            <h2>
+              {{#link-to "post" post.id}}
+                {{post.title}}
+              {{/link-to}}
+            </h2>
+            <p>Posted on
+              {{post.date}}
+            </p>
+            <p>
+              {{post.description}}
+            </p>
+          </div>
 
-      {{#link-to "edit" post.id}}
-        Edit
-      {{/link-to}}
-      
-      {{!-- button working just fine with old 'onclick=' syntax --}}
-      <button type="button" onclick= {{action "deletePost" post}} >Delete</button>
-    </li>
-  {{/each}}
+          {{#link-to "edit" post.id}}
+            Edit
+          {{/link-to}}
+          {{!-- button working just fine with old 'onclick=' syntax --}}
+          <button type="button" onclick= {{action "deletePost" post}} class="btn btn-outline-danger">Delete</button>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>
 
-</ul>
+
 {{outlet}}

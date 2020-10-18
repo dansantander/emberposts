@@ -1,10 +1,40 @@
-<nav>
-  {{#link-to "index"}}
-    Home
-  {{/link-to}}
+<nav class="navbar navbar-light bg-white px-5">
+  <span class="navbar-brand mb-0 h1">Welcome!</span>
   
-  {{#link-to "create"}}
-    Write a post
-  {{/link-to}}
+  <div>
+    <i class="fa fa-search px-2"></i>
+    <i class="fa fa-facebook-f px-2"></i>
+    <i class="fa fa-twitter px-2"></i>
+    <i class="fa fa-instagram px-2"></i>
+    <i class="fa fa-behance"></i>
+  </div>
 </nav>
+<div class="logo-container py-3">
+  <h1>
+  Something
+  </h1>
+  <p>Lifestyle blog</p>
+</div>
+<ul class="nav justify-content-center bg-white topnav my-3">
+  <li class="nav-item">
+    <span class="nav-link">  
+      {{#link-to "index"}}
+        Home
+      {{/link-to}}
+    </span>
+  </li>
+  <li class="nav-item">
+    <button type="button" class="btn btn-dark mx-2">
+      {{#link-to "create"}}
+        Write a post
+      {{/link-to}}
+    </button>
+  </li>
+  <li class="nav-item"><span class="nav-link">Pages</span></li>
+  <li class="nav-item"><span class="nav-link">Category</span></li>
+  <li class="nav-item"><span class="nav-link">About Me</span></li>
+  <li class="nav-item"><span class="nav-link">Contact</span></li>
+</ul>
+
+
 {{outlet}}
