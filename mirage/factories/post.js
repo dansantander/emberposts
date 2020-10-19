@@ -9,13 +9,13 @@ export default Factory.extend({
     return faker.random.words();
   },
   body() {
-    return faker.lorem.paragraph();
+    return faker.lorem.paragraph(50);
   },
   description() {
     return faker.lorem.sentence(10);
   },
   date() {
-    return faker.date.past();
+    return faker.date.month();
   },
   afterCreate(post, server) {
     server.createList('comment', 10 ,{ post });
