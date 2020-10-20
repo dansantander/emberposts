@@ -17,7 +17,12 @@ export default Factory.extend({
   date() {
     return faker.date.month();
   },
+  views() {
+    let amount =Math.floor(Math.random() * 4000);
+    return amount;
+  },
   afterCreate(post, server) {
-    server.createList('comment', 10 ,{ post });
+    let amount =Math.floor(Math.random() * 6); 
+    server.createList('comment', amount  ,{ post });
   }
 });

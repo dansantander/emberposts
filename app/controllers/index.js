@@ -9,4 +9,17 @@ export default class IndexController extends Controller {
       post.destroyRecord();
     }
   }
+
+  @action
+  setSelection(selected) {
+    this.set('selectedOption', selected)
+    console.log(this.selectedOption)
+  }
+
+  @action
+  submitOption(){
+    // code to save or sendAction
+    //let selectedOption = this.selectedOption
+    //this.sendAction('submit', selectedOption)
+   }
 }
