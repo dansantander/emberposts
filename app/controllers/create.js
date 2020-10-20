@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
-import { action } from '@ember/object';
+import { action } from '@ember/object'
+import faker from 'faker'
 
 export default class CreateController extends Controller {
   @action
@@ -8,9 +9,12 @@ export default class CreateController extends Controller {
     //step 1: read the inputs
     console.log(this.title, this.body)
     //step 2: save the post
+
     let post = this.store.createRecord('post', {
+      image: faker.random.image(),
       title: this.title,
-      body: this.body
+      body: this.body,
+      description: this.description
     });
     //remember: the controller also has access to the store
     //the first argument is the model name (like saying new instance of the post model)

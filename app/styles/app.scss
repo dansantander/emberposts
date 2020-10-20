@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Staatliches&display=swap');
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+}
+
+.logo-container {
+  border-top: 1px solid rgb(233, 233, 233);
+  border-bottom: 1px solid rgb(233, 233, 233);
+  text-align: center;
+
+  h1 {
+    font-family: 'Staatliches', cursive;
+  }
+  p {
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+.topnav {
+  font-size: 12px;
+
+  button {
+    font-size: 12px;
+    a {
+      color: white;
+    }
+  }
+}
+
+.card-date {
+  font-size: 12px;
+  color: gray;
+}
+
+.card-comments {
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-size: 12px;
+  }
+}
