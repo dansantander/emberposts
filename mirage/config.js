@@ -14,6 +14,11 @@ export default function() {
 
 
     this.get('/posts');
+/*     this.get('/posts/:id/comments', (schema, request) => {
+      let post = schema.posts.find(request.params.id);
+    
+      return post.comments;
+    }); */
     this.post('/posts');
     this.get('/posts/:id');
     this.patch('/posts/:id'); // or this.patch
