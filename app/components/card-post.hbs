@@ -1,0 +1,27 @@
+<li class="mx-2 my-2">
+        <div class="card">
+          <img class="card-img-top" src={{@post.image}} alt="Card image cap">
+          <div class="card-body mt-4">
+            <h4 class="card-title">
+              {{#link-to "post" @post.id}}
+                {{@post.title}}
+              {{/link-to}}
+            </h4>
+            <p class="card-date">Posted on
+              {{@post.date}}
+            </p>
+            <p>
+              {{@post.description}}
+            </p>
+          </div>
+          <div class="card-comments px-4 pb-4">
+            <div>
+              <span>{{@post.views}} Views</span>
+            </div>
+            {{#link-to "edit" @post.id}}
+              Edit
+            {{/link-to}}
+          </div>
+        <button type="button" onclick={{action "deletePost" @post}}  class="btn btn-outline-danger">Delete</button>
+        </div>
+</li>

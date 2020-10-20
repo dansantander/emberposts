@@ -1,38 +1,17 @@
 <div class="container">
+  <select  class="selection" onchange={{action "setSelection" value="target.value"}}>
+    <option disabled selected> Month </option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+  </select>
+  {{this.selectedOption}}
+  {{!-- <button class="filterbtn"onclick= {{action 'submitOption'}}>Submit</button> --}}
+  
   <ul class="card-container py-5">
-    {{#each model as |post|}} {{!-- //model is a list of posts --}}
-      <li class="mx-2 my-2">
-        <div class="card">
-          <img class="card-img-top" src={{post.image}} alt="Card image cap">
-          <div class="card-body mt-4">
-            <h4 class="card-title">
-              {{#link-to "post" post.id}}
-                {{post.title}}
-              {{/link-to}}
-            </h4>
-            <p class="card-date">Posted on
-              {{post.date}}
-            </p>
-            <p>
-              {{post.description}}
-            </p>
-          </div>
-          <div class="card-comments px-4 pb-4">
-            <div>
-              <span>Views:</span>
-              <span>Comments:</span>
-            </div>
-            {{#link-to "edit" post.id}}
-              Edit
-            {{/link-to}}
-          </div>
-          {{!-- button working just fine with old 'onclick=' syntax --}}
-          <button type="button" onclick= {{action "deletePost" post}} class="btn btn-outline-danger">Delete</button>
-        </div>
-      </li>
-    {{/each}}
+      {{#each model as |post|}} {{!-- //model is a list of posts --}}
+        <CardPost
+        @post={{post}}
+        />
+      {{/each}}
   </ul>
 </div>
-
-
-{{outlet}}
