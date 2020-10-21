@@ -1,7 +1,63 @@
-# emberposts
+# Ember CRUD Blog
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple blog project built with EmberJS that allows you to perform all the CRUD (Create, Read, Update & Delete ) operations.
+
+![screenshot](screenshot.png)
+
+## Table of Contents
+
+* [Demo](#demo)
+* [Features](#features)
+* [Endpoints](#endpoints)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Running](#running)
+* [Built With](#built-with)
+* [Contributing](#contributing)
+* [Acknowledgments](#acknowledgments)
+* [Authors](#author)
+* [License](#license)
+
+## Demo
+
+[Ember Blog]()
+
+## Features
+
+A user can:
+
+<ul>
+  <li>See a full list of posts</li>
+  <li>Create a new Post.</li>
+  <li>Edit a Post</li>
+  <li>Delete a Post</li>
+</ul>
+
+A Post has:
+
+<ul>
+  <li>A random generated image</li>
+  <li>Title</li>
+  <li>Description</li>
+  <li>Number of views</li>
+  <li>Date of creation</li>
+  <li>Random generated comments</li>
+</ul>
+
+Associations:
+
+<ul>
+  <li>A post has many comments</li>
+  <li>Comments belong to a post</li>
+</ul>
+
+
+## Endpoints
+
+- GET localhost:4200 - Index that displays a list of 10 posts from the beginning.
+- GET localhost:4200/posts/id - Displays a single post.
+- POST localhost:4200 /posts/new - For creating a new post.
+- PATCH localhost:4200 /posts/id/edit - For editing an existing post.
 
 ## Prerequisites
 
@@ -14,44 +70,48 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+Clone this repository by typing the following command inside your terminal:
+* `git clone git@github.com:dansantander/emberposts.git` this repository
+
+CD into the folder created by the cloning:
 * `cd emberposts`
+
+Install the required dependencies for this project:
 * `npm install`
 
-## Running / Development
+## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* `ember serve` or `ember s`
+* Visit app at [http://localhost:4200](http://localhost:4200).
+* Visit tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
+## Built With
 
-Make use of the many generators for code, try `ember help generate` for more details
+- Ember JS <br>
+- Git, Github and VScode <br>
 
-### Running Tests
+## Contributing
 
-* `ember test`
-* `ember test --server`
+Contributions, issues and feature requests are welcome!
 
-### Linting
+You can do it on [issues page](issues/).
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+## Acknowledgments
 
-### Building
+Special thanks to Tech Island for this oportunity.
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+## Show your support
 
-### Deploying
+Give a ⭐️ if you like this project!
 
-Specify what it takes to deploy your app.
+## Authors
 
-## Further Reading / Useful Links
+👤 **Daniel Santander**
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- Github: [@dansantander](https://github.com/dansantander)
+- Linkedin: [Daniel Santander](https://www.linkedin.com/in/daniel-santander)
+- Twitter: [@dansantandr](https://twitter.com/dansantandr)
+
+## License
+
+<strong>Creative Commons 2020</strong>

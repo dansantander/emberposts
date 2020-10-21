@@ -1,12 +1,8 @@
 <div class="container">
   <select  class="selection" onchange={{action "setSelection" value="target.value"}}>
     <option disabled selected> Month </option>
-    <option value="April">April</option>
-    <option value="May">May</option>
   </select>
-  {{this.selectedOption}}
-  {{!-- <button class="filterbtn"onclick= {{action 'submitOption'}}>Submit</button> --}}
-  
+
   <ul class="card-container py-5">
       {{#each model as |post|}} {{!-- //model is a list of posts --}}
         <CardPost
