@@ -46,6 +46,7 @@
     "ember-source": "~3.21.1",
     "ember-template-lint": "^2.11.0",
     "ember-welcome-page": "^4.0.0",
+    "ember-window-mock": "^0.7.1",
     "eslint": "^7.8.0",
     "eslint-plugin-ember": "^8.13.0",
     "eslint-plugin-node": "^11.1.0",
