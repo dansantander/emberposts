@@ -21,7 +21,6 @@ export default class CreateController extends Controller {
     //the second argument is the data
     //and now we save the record to the server and redirect
     post.save().then(()=> {
-      //this.transitionToRoute('index');
       this.transitionToRoute('post', post.id);
     })
   }

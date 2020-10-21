@@ -7,14 +7,10 @@ module('Integration | Component | card-post', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    assert.expect(1);
+    await render(hbs`
+      <CardPost />
+    `);
 
-    this.set('', 'Post')
-
-    await render(hbs`<CardPost
-     @post={{this.post.title}}
-    />`);
-
-    assert.dom(this.element).includesText('Post');
+    assert.dom('[data-test="post"]').exists("cardpost component is rendered");
   });
 });
