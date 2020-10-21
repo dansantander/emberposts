@@ -8,6 +8,7 @@ A simple blog project built with EmberJS that allows you to perform all the CRUD
 
 * [Features](#features)
 * [Endpoints](#endpoints)
+* [API](#api)
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
 * [Running](#running)
@@ -54,6 +55,20 @@ Associations:
 - POST localhost:4200 /posts/new - For creating a new post.
 - PATCH localhost:4200 /posts/id/edit - For editing an existing post.
 
+## API
+
+This project was built with Ember-CLI-Mirage.
+
+Two factories were created:
+- Posts
+- Comments
+
+Since these two models have a one to many association, there is only one scenario for creating Posts.
+A random number of Comments is created with each Post.
+
+The namespace of the API is set to 'api', so the Mirage requests have always '/api' as a prefix, e.g.
+Mirage: [200] GET /api/posts
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -83,6 +98,8 @@ Install the required dependencies for this project:
 ## Built With
 
 - Ember JS <br>
+- Ember-CLI-Mirage <br>
+- Faker JS <br>
 - Git, Github and VScode <br>
 
 ## Contributing
