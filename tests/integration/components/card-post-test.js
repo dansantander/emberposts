@@ -7,20 +7,14 @@ module('Integration | Component | card-post', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    assert.expect(1);
 
-    await render(hbs`<CardPost />`);
+    this.set('', 'Post')
 
-    assert.equal(this.element.textContent.trim(), '');
+    await render(hbs`<CardPost
+     @post={{this.post.title}}
+    />`);
 
-    // Template block usage:
-    await render(hbs`
-      <CardPost>
-        template block text
-      </CardPost>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).includesText('Post');
   });
 });

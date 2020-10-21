@@ -8,8 +8,7 @@ module('Integration | Component | form', function(hooks) {
 
   test('it renders', async function(assert) {
     assert.expect(4);
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    
     this.set('header', 'Header')
     this.set('title', 'Title')
     this.set('description', 'Description')
@@ -26,14 +25,5 @@ module('Integration | Component | form', function(hooks) {
     assert.dom(this.element).includesText('Title');
     assert.dom(this.element).includesText('Description');
     assert.dom(this.element).includesText('Body');
-
-    // Template block usage:
-    /* await render(hbs`
-      <Form>
-        template block text
-      </Form>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text'); */
   });
 });

@@ -1,5 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import { visit, currentURL } from '@ember/test-helpers';
 
 module('Unit | Route | index', function(hooks) {
   setupTest(hooks);
@@ -8,4 +9,5 @@ module('Unit | Route | index', function(hooks) {
     let route = this.owner.lookup('route:index');
     assert.ok(route);
   });
+
 });
