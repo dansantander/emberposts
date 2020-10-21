@@ -6,7 +6,6 @@ A simple blog project built with EmberJS that allows you to perform all the CRUD
 
 ## Table of Contents
 
-* [Demo](#demo)
 * [Features](#features)
 * [Endpoints](#endpoints)
 * [Prerequisites](#prerequisites)
@@ -17,10 +16,6 @@ A simple blog project built with EmberJS that allows you to perform all the CRUD
 * [Acknowledgments](#acknowledgments)
 * [Authors](#author)
 * [License](#license)
-
-## Demo
-
-[Ember Blog]()
 
 ## Features
 
